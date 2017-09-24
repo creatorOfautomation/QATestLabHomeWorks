@@ -1,22 +1,16 @@
 package firstHomeWork;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.junit.Test;
+import utilsAndHelpers.AbstractWebPage;
 
-/**
- * Created by Мужик on 23.09.2017.
- */
-public class CheckMainMenuTest  {
+public class CheckMainMenuTest extends AbstractWebPage {
 
+    private CheckingMainMenuMethod ob = new CheckingMainMenuMethod(driver);
+    private LoginMethod loginMethod = new LoginMethod(driver);
 
-
-    public static void main(String[] args) throws Exception {
-
-       /* System.setProperty("webdriver.chrome.driver", "D:\\qatestlab\\tests\\QATestLabHomeWorks\\chromedriver.exe");
-       if(pathToDriver==null)
-            throw new Exception("Driver is not found");
-        driver.get("http://clients.qatestlab.com/exams/435759");*/
-
+    @Test
+    public void main() {
+            ob.checkMainMenuItems();
     }
 
 }

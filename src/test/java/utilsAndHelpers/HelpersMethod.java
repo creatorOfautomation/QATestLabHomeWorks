@@ -2,13 +2,10 @@ package utilsAndHelpers;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
-/**
- * Created by Мужик on 24.09.2017.
- */
 public class HelpersMethod {
 
      private WebDriver driver;
@@ -17,7 +14,7 @@ public class HelpersMethod {
         this.driver = driver;
     }
 
-    public static void cliclOnObject(WebDriver driver, By element) {
+    public static void clickOnObject(WebDriver driver, By element) {
 
         (new WebDriverWait(driver,5).
                 until(ExpectedConditions.elementToBeClickable(element))).click();
@@ -40,5 +37,20 @@ public class HelpersMethod {
         driver.quit();
     }
 
+    public static WebElement findElement(WebDriver driver, By element) {
+        return (new WebDriverWait(driver, 5)
+                .until(ExpectedConditions.presenceOfElementLocated(element)));
+    }
 
+    public static String getText(WebDriver driver, By element) {
+
+        return (findElement(driver, element).getText());
+    }
+
+    public static void waitUntilElementsLocated(WebDriver driver, By elements) {
+
+        new WebDriverWait(driver, 7)
+                .until(ExpectedConditions.presenceOfAllElementsLocatedBy(elements));
+
+    }
 }
