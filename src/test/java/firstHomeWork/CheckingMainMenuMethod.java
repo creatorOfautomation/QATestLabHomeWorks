@@ -3,15 +3,16 @@ package firstHomeWork;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import utilsAndHelpers.ElementsForPages;
 import utilsAndHelpers.HelpersMethod;
 import java.util.concurrent.TimeUnit;
 
 public class CheckingMainMenuMethod extends ElementsForPages {
 
-    private WebDriver driver;
+    private EventFiringWebDriver driver;
 
-    public CheckingMainMenuMethod(WebDriver driver) {
+    public CheckingMainMenuMethod(EventFiringWebDriver driver) {
         this.driver = driver;
     }
 

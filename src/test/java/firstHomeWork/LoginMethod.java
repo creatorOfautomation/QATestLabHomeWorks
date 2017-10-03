@@ -1,14 +1,15 @@
 package firstHomeWork;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import utilsAndHelpers.ElementsForPages;
 import utilsAndHelpers.HelpersMethod;
 
 public class LoginMethod extends ElementsForPages {
 
-    private WebDriver driver;
+    private EventFiringWebDriver driver;
 
-    public LoginMethod(WebDriver driver) {
+    public LoginMethod(EventFiringWebDriver driver) {
         this.driver = driver;
     }
 

@@ -36,4 +36,14 @@ public class ElementsForPages {
     protected By shopParametersMainMenuItem = By.id("subtab-ShopParameters");
     protected By configurationsMainMenuItem = By.id("subtab-AdminAdvancedParameters");
 
+    /**
+     * Elements for adding new category test
+     */
+    protected By categoryMenuItem = By.id("subtab-AdminCategories");
+    protected By addNewCategoryButton = By.id("page-header-desc-category-new_category");
+    protected By saveNewCategoryButton = By.id("category_form_submit_btn");
+    protected By nameOfNewCategoryField = By.id("name_1");
+    protected By alertAboutAddingCategory = By.xpath(".//div[@id='content']//div[@class=\"alert alert-success\"]");
+    protected By sortByNameButton = By.xpath(".//*[@class=\"\"]//*[@class='icon-caret-down']");
+    protected By stringOfCategory = By.xpath(".//tbody//tr");
 }

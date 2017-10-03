@@ -2,12 +2,13 @@ package utilsAndHelpers;
 
 import org.junit.After;
 import org.junit.Before;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
-public class AbstractWebPage {
+public class AbstractWebPage extends SetWebDriver {
 
-    protected static WebDriver driver = new ChromeDriver();
+    protected static EventFiringWebDriver driver = getConfiguredDriver();
+    protected static Actions builder = new Actions(driver);
 
     @Before
     public void beforeTheTest() {
