@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7241d141-800a-4de2-8f16-06ff18f2f814" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/secondHomeWork/AddNewCategoryMethod.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/secondHomeWork/AddNewCategoryTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/utilsAndHelpers/EventHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/utilsAndHelpers/SetWebDriver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/firstHomeWork/CheckingMainMenuMethod.java" afterPath="$PROJECT_DIR$/src/test/java/firstHomeWork/CheckingMainMenuMethod.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/firstHomeWork/LoginMethod.java" afterPath="$PROJECT_DIR$/src/test/java/firstHomeWork/LoginMethod.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/utilsAndHelpers/AbstractWebPage.java" afterPath="$PROJECT_DIR$/src/test/java/utilsAndHelpers/AbstractWebPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/utilsAndHelpers/ElementsForPages.java" afterPath="$PROJECT_DIR$/src/test/java/utilsAndHelpers/ElementsForPages.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/utilsAndHelpers/HelpersMethod.java" afterPath="$PROJECT_DIR$/src/test/java/utilsAndHelpers/HelpersMethod.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/secondHomeWork/AddNewCategoryMethod.java" afterPath="$PROJECT_DIR$/src/test/java/secondHomeWork/AddNewCategoryMethod.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -54,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddNewCategoryMethod.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AddNewCategoryMethod.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/secondHomeWork/AddNewCategoryMethod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="35" column="21" lean-forward="false" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+            <state relative-caret-position="203">
+              <caret line="42" column="103" lean-forward="false" selection-start-line="42" selection-start-column="103" selection-end-line="42" selection-end-column="103" />
               <folding />
             </state>
           </provider>
@@ -123,7 +113,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddNewCategoryTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AddNewCategoryTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/secondHomeWork/AddNewCategoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -189,7 +179,6 @@
         <option value="$PROJECT_DIR$/src/test/java/secondHomeWork/AddNewCategory.java" />
         <option value="$PROJECT_DIR$/src/test/java/utilsAndHelpers/AbstractWebPage.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/secondHomeWork/AddNewCategoryMethod.java" />
         <option value="$PROJECT_DIR$/src/test/java/secondHomeWork/AddNewCategoryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/firstHomeWork/OtherMethod.java" />
         <option value="$PROJECT_DIR$/src/test/java/utilsAndHelpers/SetWebDriver.java" />
@@ -198,6 +187,7 @@
         <option value="$PROJECT_DIR$/src/test/java/utilsAndHelpers/OtherMethod.java" />
         <option value="$PROJECT_DIR$/src/test/java/utilsAndHelpers/EventHandler.java" />
         <option value="$PROJECT_DIR$/src/test/java/utilsAndHelpers/ElementsForPages.java" />
+        <option value="$PROJECT_DIR$/src/test/java/secondHomeWork/AddNewCategoryMethod.java" />
       </list>
     </option>
   </component>
@@ -1011,7 +1001,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1028,7 +1018,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21785174" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21785174" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1540,14 +1530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/secondHomeWork/AddNewCategoryMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="35" column="21" lean-forward="false" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/secondHomeWork/AddNewCategoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1556,6 +1538,14 @@
             <element signature="e#289#290#0" expanded="true" />
             <element signature="e#333#334#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/secondHomeWork/AddNewCategoryMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="42" column="103" lean-forward="false" selection-start-line="42" selection-start-column="103" selection-end-line="42" selection-end-column="103" />
+          <folding />
         </state>
       </provider>
     </entry>

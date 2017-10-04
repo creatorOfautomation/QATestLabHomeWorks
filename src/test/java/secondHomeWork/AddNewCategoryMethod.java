@@ -37,10 +37,10 @@ public class AddNewCategoryMethod extends ElementsForPages {
         HelpersMethod.assertTrue(HelpersMethod.isElementPresent(driver, alertAboutAddingCategory)); //verify alert appeared after adding category
         HelpersMethod.clickOnObject(driver, sortByNameButton);
         numberOfCategoriesAfterAdding = HelpersMethod.getSize(driver, stringOfCategory); // how much do we have categories  after adding new
-        HelpersMethod.assertTrue(numberOfCategoriesAfterAdding > numberOfCategoriesBeforeAdding); //there are must be  more categories then initially
+        HelpersMethod.assertTrue(numberOfCategoriesAfterAdding > numberOfCategoriesBeforeAdding); //there must be  more categories then initially
         HelpersMethod.assertTrue
                 (HelpersMethod.isElementPresent(driver, By.xpath(".//*[contains(text()," + "'"
-                        + nameOfNewCategory + "'" + " )]"))); //verify  that our new category display in list of categories
+                        + nameOfNewCategory + "'" + " )]"))); //verify  that our new category displayed in list of categories
 
     }
 }
