@@ -4,6 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
+import java.io.BufferedOutputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 
 public class EventHandler implements WebDriverEventListener{
     public void beforeAlertAccept(WebDriver webDriver) {
@@ -51,7 +55,12 @@ public class EventHandler implements WebDriverEventListener{
     }
 
     public void afterNavigateRefresh(WebDriver webDriver) {
-        System.out.println("Refreshed page " + ":" + webDriver.getCurrentUrl() + ";");
+        //System.out.println("Refreshed page " + ":" + webDriver.getCurrentUrl() + ";");
+        try {
+            System.setOut(new PrintStream(new BufferedOutputStream(new FileOutputStream("step.txt")), true));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     public void beforeFindBy(By by, WebElement webElement, WebDriver webDriver) {

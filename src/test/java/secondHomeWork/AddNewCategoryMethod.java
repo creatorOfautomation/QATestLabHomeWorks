@@ -43,4 +43,12 @@ public class AddNewCategoryMethod extends ElementsForPages {
                         + nameOfNewCategory + "'" + " )]"))); //verify  that our new category displayed in list of categories
 
     }
+
+    public void verifyAddedProduct() {
+
+        HelpersMethod.getPage(driver, linkOfMainPage);
+        HelpersMethod.clickOnObject(driver, allProductsLink);
+
+
+    }
 }

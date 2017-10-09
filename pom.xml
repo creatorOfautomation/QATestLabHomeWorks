@@ -5,10 +5,30 @@
   <groupId>com.QATestLab</groupId>
   <artifactId>QATestLab</artifactId>
   <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.20.1</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${project.build.testOutputDirectory}/testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.9</version>
+            </plugin>
+        </plugins>
+    </build>
   <packaging>jar</packaging>
 
   <name>QATestLab</name>
   <url>http://maven.apache.org</url>
+
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -60,6 +80,35 @@
           <artifactId>hamcrest-all</artifactId>
           <version>1.3</version>
           <scope>test</scope>
+      </dependency>
+
+      <dependency>
+          <groupId>org.testng</groupId>
+          <artifactId>testng</artifactId>
+          <version>6.8</version>
+          <scope>test</scope>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver -->
+      <dependency>
+          <groupId>org.seleniumhq.selenium</groupId>
+          <artifactId>selenium-firefox-driver</artifactId>
+          <version>3.6.0</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.uncommons/reportng -->
+      <dependency>
+          <groupId>org.uncommons</groupId>
+          <artifactId>reportng</artifactId>
+          <version>1.1.4</version>
+          <scope>test</scope>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/ru.yandex.qatools.allure/allure-maven-plugin -->
+      <dependency>
+          <groupId>ru.yandex.qatools.allure</groupId>
+          <artifactId>allure-maven-plugin</artifactId>
+          <version>2.6</version>
       </dependency>
 
 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite1" duration-ms="45820" started-at="2017-10-09T20:25:12Z" finished-at="2017-10-09T20:25:58Z">
+    <groups>
+    </groups>
+    <test name="Regression2" duration-ms="45820" started-at="2017-10-09T20:25:12Z" finished-at="2017-10-09T20:25:58Z">
+      <class name="thirdHomeWork.AddNewProductTest">
+        <test-method status="PASS" signature="beforeTheTest()[pri:0, instance:thirdHomeWork.AddNewProductTest@273444fe]" name="beforeTheTest" is-config="true" duration-ms="2877" started-at="2017-10-09T23:25:12Z" finished-at="2017-10-09T23:25:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTheTest -->
+        <test-method status="PASS" signature="addNewProduct()[pri:0, instance:thirdHomeWork.AddNewProductTest@273444fe]" name="addNewProduct" duration-ms="22324" started-at="2017-10-09T23:25:15Z" finished-at="2017-10-09T23:25:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewProduct -->
+        <test-method status="PASS" signature="verifyPresenceOfNewProductOnPage()[pri:0, instance:thirdHomeWork.AddNewProductTest@273444fe]" name="verifyPresenceOfNewProductOnPage" duration-ms="18028" started-at="2017-10-09T23:25:37Z" depends-on-methods="thirdHomeWork.AddNewProductTest.addNewProduct" finished-at="2017-10-09T23:25:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPresenceOfNewProductOnPage -->
+        <test-method status="PASS" signature="afterTests()[pri:0, instance:thirdHomeWork.AddNewProductTest@273444fe]" name="afterTests" is-config="true" duration-ms="2570" started-at="2017-10-09T23:25:55Z" finished-at="2017-10-09T23:25:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTests -->
+      </class> <!-- thirdHomeWork.AddNewProductTest -->
+    </test> <!-- Regression2 -->
+  </suite> <!-- Suite1 -->
+</testng-results>

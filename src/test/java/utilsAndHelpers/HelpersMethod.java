@@ -6,8 +6,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.asserts.SoftAssert;
+
 import java.util.Random;
-import static org.hamcrest.CoreMatchers.containsString;
+
+import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class HelpersMethod {
@@ -64,6 +67,11 @@ public class HelpersMethod {
 
     }
 
+    public static String randomIntValue() {
+        Random random = new Random();
+        return String.valueOf(random.nextInt(100));
+    }
+
     public static void sendPureValue(EventFiringWebDriver driver, By by, int length) {
         (new WebDriverWait(driver, 5).
                 until(ExpectedConditions.visibilityOfElementLocated(by))).sendKeys(randomPureString(length));
@@ -90,6 +98,10 @@ public class HelpersMethod {
         assertThat(findElement(driver, locator).getText(), containsString(value.toUpperCase()));
     }
 
+    public static void assertEquals(EventFiringWebDriver driver, By locator, String expectedValue) {
+        assertThat(getText(driver, locator), is(anyOf(equalTo(expectedValue), equalTo(expectedValue.toUpperCase()))));
+    }
+
     public static boolean assertTrue(Boolean condExpected) {
          Assert.assertTrue(condExpected);
                 return true;
@@ -102,7 +114,19 @@ public class HelpersMethod {
             return true;
         } catch (NoSuchElementException e) {
             return false;
+        } catch (TimeoutException e) {
+            return false;
         }
+    }
+
+    public static void clearInputFieldAndSendValue(EventFiringWebDriver driver, By locator, String dataForSending) {
+
+        (new WebDriverWait(driver, 8).
+                until(ExpectedConditions.visibilityOfElementLocated(locator))).
+                sendKeys(Keys.CONTROL + "a" + Keys.DELETE);
+        (new WebDriverWait(driver, 8).
+                until(ExpectedConditions.visibilityOfElementLocated(locator))).
+                sendKeys(dataForSending);
     }
 
 }

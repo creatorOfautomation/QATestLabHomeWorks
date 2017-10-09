@@ -1,6 +1,7 @@
 package firstHomeWork;
 
-import org.junit.Test;
+
+import org.testng.annotations.Test;
 import utilsAndHelpers.AbstractWebPage;
 
 public class CheckMainMenuTest extends AbstractWebPage {
