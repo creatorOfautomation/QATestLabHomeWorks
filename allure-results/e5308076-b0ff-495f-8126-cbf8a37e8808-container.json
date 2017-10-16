@@ -1,0 +1,1 @@
+{"uuid":"e5308076-b0ff-495f-8126-cbf8a37e8808","name":"Regression2","start":1508093708146,"stop":1508093721736,"children":["3164e4b8-2822-44fd-84e8-42ce5ea3e72f"],"afters":[{"name":"afterTests","status":"passed","stage":"finished","description":"","start":1508093720556,"stop":1508093721703}]}

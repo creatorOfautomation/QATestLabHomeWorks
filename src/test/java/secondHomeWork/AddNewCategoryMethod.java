@@ -47,7 +47,7 @@ public class AddNewCategoryMethod extends ElementsForPages {
     public void verifyAddedProduct() {
 
         HelpersMethod.getPage(driver, linkOfMainPage);
-        HelpersMethod.clickOnObject(driver, allProductsLink);
+        HelpersMethod.clickOnObject(driver, allProductsButton);
 
 
     }

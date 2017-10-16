@@ -1,12 +1,12 @@
 package thirdHomeWork;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import utilsAndHelpers.ElementsForPages;
 import utilsAndHelpers.HelpersMethod;
 import utilsAndHelpers.OtherMethod;
+import utilsAndHelpers.Properties;
 
 public class AddNewProductMethod extends ElementsForPages {
 
@@ -18,6 +18,11 @@ public class AddNewProductMethod extends ElementsForPages {
     private String priceOfNewProduct = String.valueOf(Math.random()*100).substring(0,4);
     private By newProduct = By.xpath(".//*[contains(text()," + "'"
             + nameOfNewProduct + "'" + " )]");
+    private Properties properties = new Properties();
+    public By emailFieldOnLoginPage = By.id("email");
+    public By passwordFieldOnLoginField = By.id("passwd");
+    public By loginInButton = By.xpath("//div[@class=\"form-group row-padding-top\"]//button[@name=\"submitLogin\"]");
+    public String linkOfAdminLoginPage = "http://prestashop-automation.qatestlab.com.ua/admin147ajyvk0/";
 
     public AddNewProductMethod(EventFiringWebDriver driver, Actions builder) {
         this.driver = driver;
@@ -25,7 +30,7 @@ public class AddNewProductMethod extends ElementsForPages {
     }
 
     public void AddNewProduct() {
-        otherMethod.loginInAdmin(driver);
+
         HelpersMethod.clickOnObject(driver, catalogMainMenuItem);
         HelpersMethod.assertEquals(driver, titleOfPage, titleOfPageProduct);
         HelpersMethod.clickOnObject(driver, addNewProductButton);
@@ -35,25 +40,28 @@ public class AddNewProductMethod extends ElementsForPages {
         HelpersMethod.clickOnObject(driver, priceOfNewProductTab);
         HelpersMethod.clearInputFieldAndSendValue(driver, priceOfNewProductField, priceOfNewProduct);
         HelpersMethod.clickOnObject(driver, activateNewProductSwitch);
-        try {
-            HelpersMethod.clickOnObject(driver, closeAlertButton);
-        }catch (TimeoutException e){
-            HelpersMethod.clickOnObject(driver, saveNewProductButton);
-        }
-        try {
-            HelpersMethod.clickOnObject(driver, closeAlertButton);
-        } catch (TimeoutException e) {
-            e.printStackTrace();
-        }
+        HelpersMethod.waitUntilPresenceOfElement(driver, closeAllertMessage);
+        HelpersMethod.clickOnObject(driver, closeAlertButton);
+        HelpersMethod.clickOnObject(driver, saveNewProductButton);
+        HelpersMethod.waitUntilPresenceOfElement(driver, closeAllertMessage);
+        HelpersMethod.clickOnObject(driver, closeAlertButton);
+
     }
 
     public void verifyNewProduct() {
         HelpersMethod.getPage(driver, linkOfMainPage);
-        HelpersMethod.clickOnObject(driver, allProductsLink);
-        if (HelpersMethod.isElementPresent(driver, newProduct) == false)
+        HelpersMethod.clickOnObject(driver, allProductsButton);
+
+        boolean finished = false;
+        for (int i=0; i<4; i++)
         {
-            HelpersMethod.clickOnObject(driver, nextPageButton);
+            if (HelpersMethod.isElementPresent(driver, newProduct) == false)
+            {
+                HelpersMethod.clickOnObject(driver, nextPageButton);
+            }
+            if(!finished) break;
         }
+
         HelpersMethod.clickOnObject(driver, newProduct);
         HelpersMethod.assertEquals(driver, titleOfProductOnProductPage, nameOfNewProduct);
         HelpersMethod.assertContains(driver, priceOfProductOnProductPage, priceOfNewProduct.replace('.',','));

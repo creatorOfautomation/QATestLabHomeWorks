@@ -4,11 +4,13 @@ import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -36,8 +38,8 @@ public class HelpersMethod {
                 until(ExpectedConditions.presenceOfElementLocated(element))).sendKeys(stringValue);
     }
 
-    public static void getPage(EventFiringWebDriver driver, String linkOfpage) {
-        driver.get(linkOfpage);
+    public static void getPage(EventFiringWebDriver driver, String linkOfPage) {
+        driver.get(linkOfPage);
     }
 
     public static WebElement findElement(EventFiringWebDriver driver, By element) {
@@ -95,11 +97,12 @@ public class HelpersMethod {
 
     public static void assertContains(EventFiringWebDriver driver, By locator, String value) {
 
-        assertThat(findElement(driver, locator).getText(), containsString(value.toUpperCase()));
+        assertThat(findElement(driver, locator).getText().toUpperCase(), containsString(value.toUpperCase()));
     }
 
     public static void assertEquals(EventFiringWebDriver driver, By locator, String expectedValue) {
-        assertThat(getText(driver, locator), is(anyOf(equalTo(expectedValue), equalTo(expectedValue.toUpperCase()))));
+       // expectedValue.toUpperCase();
+        assertThat(getText(driver, locator).toUpperCase(), is(anyOf(equalTo(expectedValue), equalTo(expectedValue.toUpperCase()))));
     }
 
     public static boolean assertTrue(Boolean condExpected) {
@@ -127,6 +130,96 @@ public class HelpersMethod {
         (new WebDriverWait(driver, 8).
                 until(ExpectedConditions.visibilityOfElementLocated(locator))).
                 sendKeys(dataForSending);
+    }
+
+    public static int getHighOfElement(EventFiringWebDriver driver, By locator) {
+
+        return findElement(driver, locator).getSize().getHeight();
+    }
+
+    public static int getWidthOfElement(EventFiringWebDriver driver, By locator) {
+
+        return findElement(driver, locator).getSize().getWidth();
+    }
+
+    public static void waitUntilJSWorks(EventFiringWebDriver driver) {
+        final JavascriptExecutor executor = (JavascriptExecutor)driver;
+        (new WebDriverWait(driver,10)).until(new ExpectedCondition<Boolean>() {
+            public Boolean apply(final WebDriver dirver) {
+                return (Boolean) executor.executeScript("return jQuery.active == 0");
+            }
+        });
+    }
+
+    public static void waitUntilPresenceOfElement(EventFiringWebDriver driver, By locator) {
+
+        new WebDriverWait(driver, 6).
+                until(ExpectedConditions.presenceOfElementLocated(locator));
+    }
+
+    public static void waitUntilTextPresenceInElement(EventFiringWebDriver driver, final By locator) {
+        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>()
+        {
+            public Boolean apply(WebDriver d) {
+                d.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+                return d.findElement(locator).getText().length() != 0;
+            }
+        });
+    }
+
+    public static String randomEmail() {
+        int length = 10;
+        String name = "123456789qwertyuiopasdfghjklzxcvbnmm";
+        String firstDomain = "qweryuiopasdfghjklzxcvbnm";
+        String secondDomain = "qweryuiopasdfghjklzxcvbnm";
+
+        String email = new String();
+        Random random = new Random();
+
+        //генерация первой части имейл
+        StringBuilder sb = new StringBuilder(length);
+        for (int i = 0; i <= length; i++)
+            sb.append(name.charAt(random.nextInt(name.length())));
+        email += sb;
+
+        //генерация второй части имейл
+        sb = new StringBuilder(length);
+        for (int i = 0; i <= length; i++)
+            sb.append(firstDomain.charAt(random.nextInt(firstDomain.length())));
+        email += "@" + sb;
+
+        //генерация третей части имейл
+        sb = new StringBuilder(length);
+        for (int i = 0; i <= length; i++)
+            sb.append(secondDomain.charAt(random.nextInt(secondDomain.length())));
+        email += "." + sb;
+
+        return email;
+    }
+
+    public static void sendEmail(EventFiringWebDriver driver, By by) {
+        (new WebDriverWait(driver, 5).
+                until(ExpectedConditions.visibilityOfElementLocated(by))).sendKeys(randomEmail());
+    }
+
+    public static String randomNumber(int length) {
+        final String data = "1234567890";
+
+        Random random = new Random();
+        StringBuilder sb = new StringBuilder(length);
+
+        for (int i = 0; i <= length-1; i++)
+            sb.append(data.charAt(random.nextInt(data.length())));
+        return sb.toString();
+    }
+
+    public static void sendNumberValue(WebDriver driver, By by, int length) {
+        (new WebDriverWait(driver, 5).
+                until(ExpectedConditions.visibilityOfElementLocated(by))).sendKeys(randomNumber(length));
+    }
+
+    public static String getURLOfPage(EventFiringWebDriver driver) {
+        return driver.getCurrentUrl();
     }
 
 }

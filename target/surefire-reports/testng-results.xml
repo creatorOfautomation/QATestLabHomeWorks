@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="45820" started-at="2017-10-09T20:25:12Z" finished-at="2017-10-09T20:25:58Z">
+  <suite name="HomeWork1" duration-ms="16239" started-at="2017-10-15T19:45:40Z" finished-at="2017-10-15T19:45:56Z">
     <groups>
     </groups>
-    <test name="Regression2" duration-ms="45820" started-at="2017-10-09T20:25:12Z" finished-at="2017-10-09T20:25:58Z">
-      <class name="thirdHomeWork.AddNewProductTest">
-        <test-method status="PASS" signature="beforeTheTest()[pri:0, instance:thirdHomeWork.AddNewProductTest@273444fe]" name="beforeTheTest" is-config="true" duration-ms="2877" started-at="2017-10-09T23:25:12Z" finished-at="2017-10-09T23:25:15Z">
+    <test name="Regression2" duration-ms="16239" started-at="2017-10-15T19:45:40Z" finished-at="2017-10-15T19:45:56Z">
+      <class name="firstHomeWork.LoginTest">
+        <test-method status="PASS" signature="beforeTheTest()[pri:0, instance:firstHomeWork.LoginTest@1672fe87]" name="beforeTheTest" is-config="true" duration-ms="6764" started-at="2017-10-15T22:45:33Z" finished-at="2017-10-15T22:45:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTheTest -->
-        <test-method status="PASS" signature="addNewProduct()[pri:0, instance:thirdHomeWork.AddNewProductTest@273444fe]" name="addNewProduct" duration-ms="22324" started-at="2017-10-09T23:25:15Z" finished-at="2017-10-09T23:25:37Z">
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:firstHomeWork.LoginTest@1672fe87]" name="loginTest" duration-ms="14802" started-at="2017-10-15T22:45:40Z" finished-at="2017-10-15T22:45:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addNewProduct -->
-        <test-method status="PASS" signature="verifyPresenceOfNewProductOnPage()[pri:0, instance:thirdHomeWork.AddNewProductTest@273444fe]" name="verifyPresenceOfNewProductOnPage" duration-ms="18028" started-at="2017-10-09T23:25:37Z" depends-on-methods="thirdHomeWork.AddNewProductTest.addNewProduct" finished-at="2017-10-09T23:25:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyPresenceOfNewProductOnPage -->
-        <test-method status="PASS" signature="afterTests()[pri:0, instance:thirdHomeWork.AddNewProductTest@273444fe]" name="afterTests" is-config="true" duration-ms="2570" started-at="2017-10-09T23:25:55Z" finished-at="2017-10-09T23:25:58Z">
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="afterTests()[pri:0, instance:firstHomeWork.LoginTest@1672fe87]" name="afterTests" is-config="true" duration-ms="1073" started-at="2017-10-15T22:45:55Z" finished-at="2017-10-15T22:45:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTests -->
-      </class> <!-- thirdHomeWork.AddNewProductTest -->
+      </class> <!-- firstHomeWork.LoginTest -->
     </test> <!-- Regression2 -->
-  </suite> <!-- Suite1 -->
+  </suite> <!-- HomeWork1 -->
 </testng-results>
