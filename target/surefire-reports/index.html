@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-HomeWork1">
-              <span class="suite-name border-passed">HomeWork1</span>
+              <span class="suite-name border-failed">HomeWork1</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-HomeWork1" class="hide-methods failed suite-HomeWork1"> (hide)</a> <!-- hide-methods failed suite-HomeWork1 -->
+                      <a href="#" panel-name="suite-HomeWork1" class="show-methods failed suite-HomeWork1"> (show)</a> <!-- show-methods failed suite-HomeWork1 -->
+                    </span>
+                    <div class="method-list-content failed suite-HomeWork1">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-HomeWork1" title="firstHomeWork.LoginTest" hash-for-method="testIncorrectDataForLogging(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw1, Неверный пароль)">testIncorrectDataForLogging(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw1, Неверный пароль)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-HomeWork1 -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,7 +115,22 @@
                     <div class="method-list-content passed suite-HomeWork1">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-HomeWork1" title="firstHomeWork.LoginTest" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-HomeWork1" title="firstHomeWork.LoginTest" hash-for-method="loginTest(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw)">loginTest(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-HomeWork1" title="firstHomeWork.LoginTest" hash-for-method="loginTest(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw)">loginTest(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-HomeWork1" title="firstHomeWork.LoginTest" hash-for-method="loginTest(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw)">loginTest(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-HomeWork1" title="firstHomeWork.LoginTest" hash-for-method="testIncorrectDataForLogging(weebinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw, Такого работника нет или пароль указан неверно.)">testIncorrectDataForLogging(weebinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw, Такого работника нет или пароль указан неверно.)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-HomeWork1 -->
@@ -116,6 +145,75 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-HomeWork1" class="panel HomeWork1">
+          <div class="suite-HomeWork1-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">firstHomeWork.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIncorrectDataForLogging(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw1, Неверный пароль)">
+                  </a> <!-- testIncorrectDataForLogging(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw1, Неверный пароль) -->
+                  <span class="method-name">testIncorrectDataForLogging</span>
+                  <span class="parameters">(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw1, Неверный пароль)</span>
+                  <div class="stack-trace"><b>"java.lang.AssertionError: 
+Expected: a string containing &quot;НЕВЕРНЫЙ ПАРОЛЬ&quot;
+     but: was &quot;ТАКОГО РАБОТНИКА НЕТ ИЛИ ПАРОЛЬ УКАЗАН НЕВЕРНО.&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at utilsAndHelpers.HelpersMethod.assertContains(HelpersMethod.java:100)
+	at firstHomeWork.LoginMethod.testIncorrectDataForLogging(LoginMethod.java:36)
+	at firstHomeWork.LoginTest.testIncorrectDataForLogging(LoginTest.java:41)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407)
+... Removed 21 stack frames<br/> java.lang.AssertionError: 
+Expected: a string containing &quot;НЕВЕРНЫЙ ПАРОЛЬ&quot;
+     but: was &quot;ТАКОГО РАБОТНИКА НЕТ ИЛИ ПАРОЛЬ УКАЗАН НЕВЕРНО.&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at utilsAndHelpers.HelpersMethod.assertContains(HelpersMethod.java:100)
+	at firstHomeWork.LoginMethod.testIncorrectDataForLogging(LoginMethod.java:36)
+	at firstHomeWork.LoginTest.testIncorrectDataForLogging(LoginTest.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407)
+"</b><br>org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)<br>org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)<br>utilsAndHelpers.HelpersMethod.assertContains(HelpersMethod.java:100)<br>firstHomeWork.LoginMethod.testIncorrectDataForLogging(LoginMethod.java:36)<br>firstHomeWork.LoginTest.testIncorrectDataForLogging(LoginTest.java:41)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)<br>org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)<br>org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)<br>org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373)<br>org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334)<br>org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119)<br>org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407)<br>
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-HomeWork1-class-failed -->
           <div class="suite-HomeWork1-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -124,9 +222,34 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginTest">
-                  </a> <!-- loginTest -->
+                  <a name="loginTest(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw)">
+                  </a> <!-- loginTest(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw) -->
                   <span class="method-name">loginTest</span>
+                  <span class="parameters">(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTest(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw)">
+                  </a> <!-- loginTest(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw) -->
+                  <span class="method-name">loginTest</span>
+                  <span class="parameters">(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTest(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw)">
+                  </a> <!-- loginTest(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw) -->
+                  <span class="method-name">loginTest</span>
+                  <span class="parameters">(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testIncorrectDataForLogging(weebinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw, Такого работника нет или пароль указан неверно.)">
+                  </a> <!-- testIncorrectDataForLogging(weebinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw, Такого работника нет или пароль указан неверно.) -->
+                  <span class="method-name">testIncorrectDataForLogging</span>
+                  <span class="parameters">(weebinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw, Такого работника нет или пароль указан неверно.)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -183,16 +306,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'loginTest')
 data.setCell(0, 2, 'firstHomeWork.LoginTest')
-data.setCell(0, 3, 14802);
+data.setCell(0, 3, 8449);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'loginTest')
+data.setCell(1, 2, 'firstHomeWork.LoginTest')
+data.setCell(1, 3, 7089);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'loginTest')
+data.setCell(2, 2, 'firstHomeWork.LoginTest')
+data.setCell(2, 3, 6664);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testIncorrectDataForLogging')
+data.setCell(3, 2, 'firstHomeWork.LoginTest')
+data.setCell(3, 3, 2990);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testIncorrectDataForLogging')
+data.setCell(4, 2, 'firstHomeWork.LoginTest')
+data.setCell(4, 3, 2930);
 window.suiteTableData['HomeWork1']= { tableData: data, tableDiv: 'times-div-HomeWork1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 28 seconds</span>
               <div id="times-div-HomeWork1">
               </div> <!-- times-div-HomeWork1 -->
             </div> <!-- times-div -->
@@ -224,12 +363,30 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
-                <span class="method-name">loginTest</span>
-                <span class="method-start">6782 ms</span>
+                <span class="method-name">loginTest(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw)</span>
+                <span class="method-start">3013 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginTest(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw)</span>
+                <span class="method-start">12017 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginTest(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw)</span>
+                <span class="method-start">19111 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testIncorrectDataForLogging(webinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw1, Неверный пароль)</span>
+                <span class="method-start">25777 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testIncorrectDataForLogging(weebinar.test@gmail.com, Xcg7299bnSmMuRLp9ITw, Такого работника нет или пароль указан неверно.)</span>
+                <span class="method-start">28826 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">afterTests</span>
-                <span class="method-start">21930 ms</span>
+                <span class="method-start">31827 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

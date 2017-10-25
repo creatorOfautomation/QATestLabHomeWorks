@@ -1,4 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.715 s - in TestSuite
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 40.845 s <<< FAILURE! - in TestSuite
+testIncorrectDataForLogging(firstHomeWork.LoginTest)  Time elapsed: 3.032 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: a string containing "НЕВЕРНЫЙ ПАРОЛЬ"
+     but: was "ТАКОГО РАБОТНИКА НЕТ ИЛИ ПАРОЛЬ УКАЗАН НЕВЕРНО."
+	at firstHomeWork.LoginTest.testIncorrectDataForLogging(LoginTest.java:41)
+

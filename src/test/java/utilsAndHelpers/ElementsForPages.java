@@ -16,6 +16,7 @@ public class ElementsForPages extends Properties {
     protected By loginInButton = By.xpath("//div[@class=\"form-group row-padding-top\"]//button[@name=\"submitLogin\"]");
     protected By pictureOfUserAccount = By.id("employee_infos");
     protected By logoutButton = By.id("header_logout");
+    protected By errorMessageInvalidPasswordOrLogin = By.cssSelector("#error ol");
 
     /**
      * Elements for mainMenuTest

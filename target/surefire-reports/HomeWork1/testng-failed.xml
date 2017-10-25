@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [HomeWork1]">
+  <test name="Regression2(failed)">
+    <classes>
+      <class name="firstHomeWork.LoginTest">
+        <methods>
+          <include name="beforeTheTest"/>
+          <include name="afterTests"/>
+          <include name="testIncorrectDataForLogging" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- firstHomeWork.LoginTest -->
+    </classes>
+  </test> <!-- Regression2(failed) -->
+</suite> <!-- Failed suite [HomeWork1] -->
